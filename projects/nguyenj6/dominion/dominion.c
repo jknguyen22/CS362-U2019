@@ -598,7 +598,6 @@ int getCost(int cardNumber) {
 
 // case mine
 int callMine(struct gameState *state, int choice1, int choice2, int handPos) {
-    // we are outside of the switch statement so we need to re-initialize the variables
     int currentPlayer = whoseTurn(state);
     int i, j;
 
@@ -651,7 +650,7 @@ int callBaron(struct gameState *state, int choice1) {
                     state->hand[currentPlayer][p] = state->hand[currentPlayer][p + 1];
                 }
                 //***BUG*** state->hand[currentPlayer][state->handCount[currentPlayer]] = -1;
-                state->hand[currentPlayer][state->handCount[currentPlayer]] <= -1;
+                state->hand[currentPlayer][state->handCount[currentPlayer]] >= -1;
                 state->handCount[currentPlayer]--;
                 card_not_discarded = 0;//Exit the loop
             } else if (p > state->handCount[currentPlayer]) {
