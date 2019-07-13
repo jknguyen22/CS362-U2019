@@ -129,6 +129,7 @@ int main (int argc, char** argv) {
 
   printf ("Finished game.\n");
   printf ("Player 0: %d\nPlayer 1: %d\n", scoreFor(0, &G), scoreFor(1, &G));
+  system("pause");
 
   return 0;
 }
